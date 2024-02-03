@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#text-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#imgs-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.img {
+    width: 200px;
+    height: 355px;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-desc{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 16px;
+    width: 150px;
+}
+
+.img-wrapper:hover .img {
+    opacity: 50%;
+}
