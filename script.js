@@ -1,48 +1,31 @@
 const mainContainer = document.getElementById('container');
 
-const textContainer = document.createElement('div');
-textContainer.setAttribute('id', 'text-container');
 
-const para = document.createElement('p');
-para.textContent = 'Hello World!';
-const textBtn = document.createElement('button');
-textBtn.textContent = 'Change Text';
+function createImgs(totalImgs) {
+    const imgsContainer = document.createElement('div')
+    imgsContainer.setAttribute('id', 'imgs-container');
 
-textContainer.appendChild(para);
-textContainer.appendChild(textBtn);
-mainContainer.appendChild(textContainer);
+    for (let i = 1; i <= totalImgs; i++) {
+        const imgWrapper = document.createElement('div');
+        imgWrapper.classList.add('img-wrapper');
 
-textBtn.addEventListener('click', changeText);
+        const img = document.createElement('img');
+        img.setAttribute('id', `img${i}`);
+        img.classList.add('img');
 
-function changeText() {
-    if (para.textContent === 'Hello World!') {
-        para.textContent = 'Goodbye World!';
-    } else {
-        para.textContent = 'Hello World!';
+        const imgDesc = document.createElement('div')
+        imgDesc.setAttribute('id', `img-desc${i}`);
+        imgDesc.classList.add('img-desc');
+
+        imgWrapper.appendChild(img);
+        imgWrapper.appendChild(imgDesc);
+        imgsContainer.appendChild(imgWrapper);
     }
+
+    mainContainer.appendChild(imgsContainer);
 }
+createImgs(5);
 
-const imgsContainer = document.createElement('div')
-imgsContainer.setAttribute('id', 'imgs-container');
-
-for (let i = 1; i < 6; i++) {
-    const imgWrapper = document.createElement('div');
-    imgWrapper.classList.add('img-wrapper');
-
-    const img = document.createElement('img');
-    img.setAttribute('id', `img${i}`);
-    img.classList.add('img');
-
-    const imgDesc = document.createElement('div')
-    imgDesc.setAttribute('id', `img-desc${i}`);
-    imgDesc.classList.add('img-desc');
-
-    imgWrapper.appendChild(img);
-    imgWrapper.appendChild(imgDesc);
-    imgsContainer.appendChild(imgWrapper);
-}
-
-mainContainer.appendChild(imgsContainer);
 
 document.getElementById('img1').src = 'images/cake1.jpeg'
 document.getElementById('img2').src = 'images/cake2.jpeg'
@@ -70,4 +53,37 @@ eachImg[i].addEventListener('mouseover', () => {
 eachImg[i].addEventListener('mouseout', () => {
     eachImgDesc[i].textContent = '';
 })
+}
+
+let cakeInfo = {
+    cake1: {
+        name: 'Birthday Cake',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        price: '$22,90',
+        imagePath: 'images/cake1.jpeg',
+    },
+    cake2: {
+        name: 'Marriage Cake',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        price: '$39,20',
+        imagePath: 'images/cake2.jpeg',
+    },
+    cake3: {
+        name: 'Berrys Cake',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        price: '$14,90',
+        imagePath: 'images/cake3.jpeg',
+    },
+    cake4: {
+        name: "M&M's Cake",
+        Description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        price: '$28,10',
+        imagePath: 'images/cake4.jpeg',
+    },
+    cake5: {
+        name: 'Chocolate Cake',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        price: '$12,00',
+        imagePath: 'images/cake1.jpeg',
+    },
 }
