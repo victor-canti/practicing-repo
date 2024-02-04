@@ -1,31 +1,31 @@
 let cakeInfo = {
     cake1: {
         name: 'Birthday Cake',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        description: "Celebrate joyously with our moist and flavorful birthday cake adorned with vibrant sprinkles. Topped with velvety frosting, this festive creation is a delightful blend of sweetness, perfect for any celebration. Enjoy the moment with our scrumptious birthday cake, designed to make your special day memorable.",
         price: '$22,90',
         imagePath: 'images/cake1.jpeg',
     },
     cake2: {
         name: 'Marriage Cake',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        description: "Celebrate love with our exquisite wedding cake, adorned with delicate frosting for a timeless masterpiece. This harmonious blend of flavors is a captivating centerpiece, crafted to make your celebration memorable. Indulge in the sweetness of the moment with our beautifully designed wedding cake, expressing love and commitment effortlessly.",
         price: '$39,20',
         imagePath: 'images/cake2.jpeg',
     },
     cake3: {
-        name: 'Berrys Cake',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        name: 'Berries Cake',
+        description: "Indulge in the freshness of our berry cake, a moist delight adorned with a medley of juicy berries. The soft sponge, complemented by a delicate berry-infused frosting, creates a perfect balance of tart and sweet. Perfect for any occasion, this berry-infused creation brings a vibrant touch to your festivities.",
         price: '$14,90',
         imagePath: 'images/cake3.jpeg',
     },
     cake4: {
         name: "M&M's Cake",
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        description: "Indulge in the joy of our M&M's cake, a soft, moist delight adorned with the iconic candy-coated M&M's. Each layer promises a playful explosion of texture, while a velvety chocolate frosting envelops the creation. Perfect for any celebration, this whimsical treat combines nostalgia with irresistible indulgence, offering a delightful burst of color and flavor.",
         price: '$28,10',
         imagePath: 'images/cake4.jpeg',
     },
     cake5: {
         name: 'Chocolate Cake',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore enim quibusdam, voluptates amet dicta blanditiis asperiores neque non sit qui veniam facilis aliquid alias magni excepturi odio hic iste.',
+        description: "Immerse yourself in the indulgent pleasure of our sumptuous chocolate cake, where each velvety bite releases layers of decadence. The rich cocoa flavors are perfectly complemented by a luscious chocolate frosting, creating a harmonious balance of sweetness. This visual and culinary masterpiece is not just a dessert; it's an experience that captivates your senses and adds a touch of luxury to any celebration. Allow yourself to be transported into a world of pure delight with every exquisite mouthful",
         price: '$12,00',
         imagePath: 'images/cake1.jpeg',
     },
@@ -43,16 +43,16 @@ document.getElementById('img3').src = cake3[3];
 document.getElementById('img4').src = cake4[3];
 document.getElementById('img5').src = cake5[3];
 
-document.getElementById('img-desc1').textContent = cake1[2];
-document.getElementById('img-desc2').textContent = cake2[2];
-document.getElementById('img-desc3').textContent = cake3[2];
-document.getElementById('img-desc4').textContent = cake4[2];
-document.getElementById('img-desc5').textContent = cake5[2];
+document.getElementById('img-desc1').textContent = cake1[1];
+document.getElementById('img-desc2').textContent = cake2[1];
+document.getElementById('img-desc3').textContent = cake3[1];
+document.getElementById('img-desc4').textContent = cake4[1];
+document.getElementById('img-desc5').textContent = cake5[1];
 
 const eachImg = document.querySelectorAll('.img-wrapper');
 const eachImgDesc = document.querySelectorAll('.img-desc');
 
-for (let i = 0; i < cake1.length; i++) {
+for (let i = 0; i < 5; i++) {
 const imgText = eachImgDesc[i].textContent;
 eachImgDesc[i].textContent = '';
 
